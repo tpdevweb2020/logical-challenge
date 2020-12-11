@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversons la chaine</title>
+</head>
+<body>
+    <h1>Chaine de caractères de base</h1>
+    <script>
+        // OBJECTIF : Ecrire grâce à une fonction notre phrase contenu dans le h1 à l'envers 
+        // Exemple : chaineRerverse("Bonjour les gens") -> string "sneg sel ruojnoB"
+
+        var h1 = document.querySelector("h1"); // On récupère la source
+        
+        function chaineReverse(el){
+            var chaine = el.textContent; // On récupère le contenu du tag source
+            var chaineInversee = chaine.split("").reverse().join(""); // On inverse la string
+            return chaineInversee; // On retourne le result
+        }
+
+        h1.innerHTML = chaineReverse(h1); // On remplace dans la src
+
+    </script>
+</body>
+</html>
