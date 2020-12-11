@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="begin" placeholder="valeur 1" id="val1" onkeyup="sommeToutes('val1', 'val2')">
+    <input type="number" name="end"  placeholder="valeur 2" id="val2" onkeyup="sommeToutes('val1', 'val2')">
+    <br>
+    Résultat :<br>
+    <input type="text" name="result" id="resultId">
+
+    <script>
+        // OBJECTIF : Creer une fonction sommeToutes(begin, end) qui nous donnera un résultat
+        // Pour comprendre ce que doit faire la fonction, voici 3 exemples pour deviner la logique
+
+        // EX 1 : sommeToutes(1, 4) => 10
+        // EX 2 : sommeToutes(3, 9) => 42
+        // EX 3 : sommeToutes(6, 10) => 40
+
+        // A VOUS DE JOUER !!!
+
+        function sommeToutes(elem1, elem2){
+            var value1 = document.getElementById(elem1).value;
+            var value2 = document.getElementById(elem2).value;
+            var resultId = document.getElementById("resultId");
+
+            var result = 0;
+            for(i = Number(value1); i <= Number(value2); i++){
+                result += i;
+            }
+            resultId.value = result;
+        }
+
+
+
+    </script>
+</body>
+</html>
